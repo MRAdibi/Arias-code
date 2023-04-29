@@ -1,12 +1,17 @@
+/* Font Style Start */
+@import url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Sahel;
 }
 
 :root {
     --main: #102197;
     --main--text: #f5eaf0;
+    --text: #050608;
     --background: #eb6741;
 }
 
@@ -46,15 +51,40 @@
 .top_section {
     background-color: var(--main);
     color: var(--main--text);
-    direction: rtl;
     border-radius: 20px;
+    direction: rtl;
 }
 
+.navbar .nav-item .nav-link {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+}
+
+
+.navbar .nav-item .nav-link::before {
+    background-color: var(--main);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover:before {
+    transform: scale(1);
+}
 
 /* Top Section Icons */
 .effect {
     position: absolute;
-    z-index: 50;
+    z-index: 1;
 }
 
 .effect-1 {
@@ -92,6 +122,7 @@
     from {
         transform: rotateZ(0deg);
     }
+
     to {
         transform: rotateZ(360deg);
     }
@@ -103,6 +134,7 @@
     from {
         transform: translate(0) rotatez(0deg);
     }
+
     to {
         transform: translate(0px, -200px) rotatez(360deg);
     }
