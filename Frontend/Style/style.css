@@ -49,3 +49,61 @@
     direction: rtl;
     border-radius: 20px;
 }
+
+
+/* Top Section Icons */
+.effect {
+    position: absolute;
+    z-index: 50;
+}
+
+.effect-1 {
+    left: 20%;
+    top: 25%;
+    font-size: 40px;
+    color: var(--background);
+    animation: circle-down 7s linear infinite;
+}
+
+.effect-2 {
+    right: 50%;
+    top: 30%;
+    font-size: 50px;
+    color: var(--background);
+    animation: circle-down 8s linear infinite;
+}
+
+.effect-3 {
+    right: 85%;
+    top: 70%;
+    font-size: 90px;
+    color: var(--background);
+    animation: circle-down-move 6s ease-in-out infinite alternate;
+}
+
+#circle-down {
+    animation: circle-down 9s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+
+@keyframes circle-down {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+
+@keyframes circle-down-move {
+    from {
+        transform: translate(0) rotatez(0deg);
+    }
+    to {
+        transform: translate(0px, -200px) rotatez(360deg);
+    }
+}
