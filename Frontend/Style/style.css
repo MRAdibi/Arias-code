@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #102197;
+    --main--text: #f5eaf0;
+}
+
+/* change the bootstrap class "container" */
+.container {
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+
+/* Nav Item */
+.nav_items {
+    font-weight: 600;
+}
+
+.nav_items a {
+    margin-inline: 12px;
+}
+
+
+.top_section {
+    background-color: var(--main);
+    color: var(--main--text);
+    direction: rtl;
+    border-radius: 20px;
+}
