@@ -17,6 +17,7 @@
     --text: #050608;
     --background: #eb6741;
     --background-2: #005ed0;
+    --background-light: #efefef;
 }
 
 body {
@@ -151,17 +152,6 @@ body {
 
 /* Our Service */
 
-.our_service #top_title {
-    color: var(--background);
-    font-weight: 600;
-}
-
-.our_service #title {
-    margin-top: 10px;
-    font-size: 40px;
-    font-weight: 600;
-}
-
 .service_detail {
     padding: 25px;
     transition: all 0.5S ease-in-out;
@@ -186,12 +176,12 @@ body {
     position: relative;
 }
 
-#top_title_roadmap {
+.top_title {
     color: var(--background);
     font-weight: 600;
 }
 
-#title_roadmap {
+.title {
     margin-top: 10px;
     font-size: 40px;
     font-weight: 600;
@@ -281,6 +271,7 @@ body {
     color: var(--main--text);
     background-color: var(--main);
     font-weight: 600;
+    border: none;
     padding-inline: 35px;
     border-radius: 18px;
     transition: ease 0.3s;
@@ -288,5 +279,75 @@ body {
 
 .contract button:hover {
     background-color: var(--background-2);
+    color: var(--main--text);
+}
+
+/* Price Plan */
+.price_plan {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background-light);
+    color: var(--text);
+    padding: 60px 90px;
+    margin-inline: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.3);
+}
+
+.price_plan_active {
+    background: linear-gradient(157deg, rgba(0, 61, 178, 1) 10%, rgba(1, 101, 213, 1) 80%);
+    color: var(--main--text);
+}
+
+.price_plan::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 25px;
+}
+
+.plan_1::after {
+    background: linear-gradient(121deg, rgba(235, 103, 65, 1) 10%, rgba(16, 33, 151, 1) 80%);
+}
+
+
+
+.plan_3::after {
+    background: linear-gradient(274deg, rgba(235,103,65,1) 11%, rgba(5,6,8,1) 80%);
+}
+
+.price_plan #title {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.price_plan #description {
+    font-weight: 600;
+}
+
+.price_plan ul {
+    padding-right: 30px;
+    list-style: none;
+}
+
+.price_plan ul li {
+    margin-block: 15px;
+}
+
+.price_plan button {
+    background-color: var(--main--text);
+    color: var(--text);
+    font-weight: 600;
+    padding-inline: 35px;
+    border-radius: 18px;
+    transition: ease 0.3s;
+}
+
+.price_plan button:hover {
+    background-color: var(--main);
     color: var(--main--text);
 }
