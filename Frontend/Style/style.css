@@ -1,11 +1,14 @@
-/* Font Style Start */
-@import url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css');
+/* Font Style */
+@font-face {
+    font-family: "IRANYekanMedium";
+    src: url(../Fonts/IRANYekanMedium.woff);
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Sahel;
+    font-family: IRANYekanMedium;
 }
 
 :root {
@@ -13,6 +16,10 @@
     --main--text: #f5eaf0;
     --text: #050608;
     --background: #eb6741;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 /* change the bootstrap class "container" */
@@ -106,7 +113,7 @@
 .effect-3 {
     right: 85%;
     top: 70%;
-    font-size: 90px;
+    font-size: 70px;
     color: var(--background);
     animation: circle-down-move 6s ease-in-out infinite alternate;
 }
@@ -143,14 +150,14 @@
 
 /* Our Service */
 
-.our_service #top-title {
+.our_service #top_title {
     color: var(--background);
     font-weight: 600;
 }
 
 .our_service #title {
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
 }
 
@@ -159,8 +166,7 @@
     transition: all 0.5S ease-in-out;
 }
 
-.service_detail p,
-h4 {
+.service_detail h4 {
     font-weight: 600;
 }
 
@@ -168,6 +174,101 @@ h4 {
     padding: 50px;
     background-color: #14141413;
     border-radius: 15px;
-    box-shadow: 0px 0px 56px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 56px 1px rgba(0, 0, 0, 0.2);
     transition: all 0.5S ease-in-out;
+}
+
+
+/* Roadmap Section */
+
+.roadmap_section {
+    position: relative;
+}
+
+#top_title_roadmap {
+    color: var(--background);
+    font-weight: 600;
+}
+
+#title_roadmap {
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.roadmap_section h2 {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.roadmap_section button {
+    margin-inline: 10px;
+}
+
+.roadmap_section #shape_1 {
+    position: absolute;
+    width: 20%;
+    top: 30%;
+    left: 0;
+    z-index: -1;
+    animation: shape_1 15s ease-in-out infinite alternate;
+}
+
+.roadmap_section .shape_2 {
+    position: absolute;
+    width: 30%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    animation: shape_2 9s ease-in-out infinite alternate;
+}
+
+@keyframes shape_1 {
+    from {
+        transform: rotatez(0deg) scale(1);
+    }
+
+    to {
+        transform: rotatez(180deg) scale(1.5);
+    }
+}
+
+@keyframes shape_2 {
+    from {
+        transform: translate(0) rotatez(0deg) scale(1);
+    }
+
+    to {
+        transform: translate(0px, -200px) rotatez(180deg) scale(1.5);
+    }
+}
+
+
+.roadmap_section #contact_btn {
+    color: var(--main--text);
+    background-color: var(--main);
+    font-weight: 600;
+    padding-inline: 35px;
+    border-radius: 18px;
+    transition: ease 0.3s;
+}
+
+.roadmap_section #contact_btn:hover {
+    color: var(--background);
+    background-color: #1b1b1b;
+}
+
+.roadmap_section #portfolio_btn {
+    color: var(--main--text);
+    background-color: var(--background);
+    border: none;
+    font-weight: 600;
+    padding-inline: 35px;
+    border-radius: 18px;
+    transition: ease 0.3s;
+}
+
+.roadmap_section #portfolio_btn:hover {
+    background-color: var(--main);
+    color: var(--main--text);
 }
