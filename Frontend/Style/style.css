@@ -209,7 +209,7 @@ body {
 .roadmap_section #shape_1 {
     position: absolute;
     width: 20%;
-    top: 60%;
+    top: 40%;
     left: 0;
     z-index: -1;
     animation: shape_1 15s ease-in-out infinite alternate;
@@ -273,3 +273,5 @@ body {
     background-color: var(--main);
     color: var(--main--text);
 }
+
+
