@@ -16,7 +16,7 @@
     --main--text: #f5eaf0;
     --text: #050608;
     --background: #eb6741;
-    --background-2:#005ed0;
+    --background-2: #005ed0;
 }
 
 body {
@@ -275,3 +275,18 @@ body {
 }
 
 
+/* Contract Section */
+
+.contract button {
+    color: var(--main--text);
+    background-color: var(--main);
+    font-weight: 600;
+    padding-inline: 35px;
+    border-radius: 18px;
+    transition: ease 0.3s;
+}
+
+.contract button:hover {
+    background-color: var(--background-2);
+    color: var(--main--text);
+}
