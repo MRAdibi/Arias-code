@@ -16,6 +16,7 @@
     --main--text: #f5eaf0;
     --text: #050608;
     --background: #eb6741;
+    --background-2:#005ed0;
 }
 
 body {
@@ -254,8 +255,8 @@ body {
 }
 
 .roadmap_section #contact_btn:hover {
-    color: var(--background);
-    background-color: #1b1b1b;
+    background-color: var(--background-2);
+    color: var(--main--text);
 }
 
 .roadmap_section #portfolio_btn {
